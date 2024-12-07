@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits.h>
 using namespace std;
 bool isPresent(int arr[][3], int target, int row, int col)
 {
@@ -15,6 +16,28 @@ bool isPresent(int arr[][3], int target, int row, int col)
         
     }
     return false;
+    
+}
+int largestRowSum(int arr[][3], int row , int col)
+{
+    
+    int largestsum = INT_MIN;
+    int ans = 0;
+    for (int  i = 0; i < row; i++)
+    {
+        int sum = 0;
+        for (int  j = 0; j < col; j++)
+        {
+            sum = sum + arr[i][j];
+        }
+        if (sum > largestsum )
+        {
+            largestsum = sum;
+            ans = i;
+        }
+        
+        
+    }
     
 }
 void printSumColwise(int arr[][3], int row , int col )
@@ -84,7 +107,9 @@ int main() {
     }
     printArr(arr, 2, 3);
     printSumColwise(arr, 2, 3);
-    
+    int largestRowSumIndex = largestRowSum(arr, 2,3);
+    cout << largestRowSumIndex;
+
     
     
 
