@@ -17,6 +17,22 @@ bool isPresent(int arr[][3], int target, int row, int col)
     return false;
     
 }
+void printSumColwise(int arr[][3], int row , int col )
+{
+    for (int  i = 0; i < col; i++)
+    {
+        int sum = 0;
+        for (int  j = 0; j < row; j++)
+        {
+            sum = sum + arr[j][i];
+            
+        }
+        cout << "Sum of Column " << i << " is :" << sum ;
+        cout<< endl;
+        
+    }
+    
+}
 void printArr(int arr[][3] , int row , int col)
 {
     for (int  i = 0; i < row; i++)
@@ -67,6 +83,8 @@ int main() {
         cout<< "Row " << i << " Sum is " << rowSum[i] << endl;
     }
     printArr(arr, 2, 3);
+    printSumColwise(arr, 2, 3);
+    
     
     
 
