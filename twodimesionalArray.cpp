@@ -39,6 +39,23 @@ int main() {
     {
         cout << "Not Found" << endl;
     }
+    int rowSum[2] = {0};
+    for (int  row = 0; row < 2; row++)
+    {
+        for (int  col = 0; col < 3; col++)
+        {
+            rowSum[row] += arr[row][col]; 
+        }
+        
+    }
+    cout<< "Printing Row wise sum: " << endl;
+    for (int  i = 0; i < 2; i++)
+    {
+        cout<< "Row " << i << " Sum is " << rowSum[i] << endl;
+    }
+    
+    
+
 
     
 }
