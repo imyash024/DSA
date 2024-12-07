@@ -17,6 +17,19 @@ bool isPresent(int arr[][3], int target, int row, int col)
     return false;
     
 }
+void printArr(int arr[][3] , int row , int col)
+{
+    for (int  i = 0; i < row; i++)
+    {
+        for (int  j = 0; j < col; j++)
+        {
+            cout<< arr[i][j] << " ";
+        }
+        cout << endl;
+        
+    }
+    
+}
 int main() {
     int arr[2][3];
     cout<< "Enter Elements" << endl;
@@ -53,6 +66,7 @@ int main() {
     {
         cout<< "Row " << i << " Sum is " << rowSum[i] << endl;
     }
+    printArr(arr, 2, 3);
     
     
 
