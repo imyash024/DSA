@@ -52,7 +52,7 @@ vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
     vector <int> ans;
     for(int i = 0; i < mCols; i++)
     {
-        if((i % 2) == 0)
+        if(!(i&1))
         {
             for(int k = 0; k < nRows; k++)
             {
