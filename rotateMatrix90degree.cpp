@@ -25,9 +25,34 @@ n == matrix.length == matrix[i].length
 1 <= n <= 20
 -1000 <= matrix[i][j] <= 1000
 */
-
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int order= matrix.size();
+        
+        //index intialziation
+        int startingRow = 0;
+        int endingRow  = order -1;
+        int startingCol = 0;
+        int endingCol =  order -1;
+        while(startingRow < endingRow)
+        {
+            for(int i = 0; i < (endingCol-startingCol); i++)
+            {
+                swap(matrix[startingRow][startingCol+i], matrix[startingRow+i][endingCol]);
+                swap(matrix[endingRow][endingCol-i], matrix[endingRow-i][startingCol]);
+                swap(matrix[endingRow][endingCol-i],matrix[startingRow][startingCol+i]);
+            }
+            startingRow++;
+            startingCol++;
+            endingRow--;
+            endingCol--;
+        }
+        
+    }
+};
 
 int main()
 {
-    return 0;
+    
 }
