@@ -56,5 +56,4 @@ public:
 int main()
 {
     vector<vector<int>> v = {{1,2,3,4,}, {1,2,5,7}};
-    
 }
