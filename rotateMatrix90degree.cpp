@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <vector>
 /*
 You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 
@@ -54,5 +55,6 @@ public:
 
 int main()
 {
+    vector<vector<int>> v = {{1,2,3,4,}, {1,2,5,7}};
     
 }
