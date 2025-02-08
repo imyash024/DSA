@@ -27,8 +27,16 @@ int main()
 {
     int arr[] = {1,3,4,5,6};
     int size = 5;
-    bool isPresent = binarySearch(arr, 0, size-1, 5);
-
+    bool isPresent = binarySearch(arr, 0, size-1, 30);
+    if (isPresent)
+    {
+        cout<< "Element Found" << endl;
+    }
+    else
+    {
+        cout<< "Element Not Found" << endl;
+    }
+    
     
     
 }
